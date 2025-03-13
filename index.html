@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuseelandreise</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+</head>
+
+<body>
+    <header>
+        <!--https://pixabay.com/de/photos/neuseeland-champagner-pool-4839022/-->
+        <img src="images/Puerto _Escondido_1.jpg" alt="Strand in Puerto Escondido">
+        <a href="https://github.com/webmapping/nz"><img src="images/maori.jpg" alt="Maori"></a>
+    </header>
+    <main>
+        <h1>Puerto Escondido</h1>
+        <p>Puerto Escondido <em>versteckter Hafen</em> ist eine ca. 30.000 Einwohner zählende Urlaubsstadt an der Pazifikküste im Bundesstaat Oaxaca im Süden Mexikos. Die Stadt ist vor allen Dingen ein Ziel für Badetouristen und Surfer.</p>
+        <p>Puerto Escondido liegt ca. 250 km (Fahrtstrecke) südlich von Oaxaca de Juárez in einer Höhe bis zu 60 m; die kürzeste Straßenverbindung (ca. 760 km) nach Mexiko-Stadt führt über Acapulco. Das Klima ist überwiegend schwülwarm; Regen (ca. 1285 mm/Jahr) fällt hauptsächlich in den Monaten Juni bis Oktober.</p>
+        <p>Puerto Escondido war lange Zeit ein nur schwer erreichbarer Fischerort, der erst in den späten 1950er Jahren von Surfern entdeckt wurde und seitdem eine gemäßigte touristische Entwicklung erfuhr.</p>
+        <a href="https://de.wikipedia.org/wiki/Puerto_Escondido">Quelle: Wikipedia</a>
+        <figure>
+            <img src="images/Puerto _Escondido_2.jpg" alt="Strand in Puerto Escondido">
+            <!-- Bild von https://pixabay.com/de/photos/neuseeland-vulkanismus-rotorua-3996366/ -->
+            <figcaption> Puerto Escondido (Quelle: <a
+                    href="https://commons.wikimedia.org/wiki/File:Playa_En_Puerto_Escondido_-_panoramio_-_abimael_de_zoritana.jpg">Wikipedia</a>)
+            </figcaption>
+        </figure>
+        <h3>Übersichtskarte</h3>
+        <div id="map" style="width:900px;height:600px;border:1px solid silver"></div>
+        <h3>Links</h3>
+        <ul>
+            <li><a href="https://de.wikipedia.org/wiki/Puerto_Escondido">Puerto Escondido bei Wikipedia</a></li>
+            <li><a href="https://www.surfline.com/surf-report/puerto-escondido/5842041f4e65fad6a7708b43?camId=58349f8c3421b20545c4b577">Surfreport von Puerto Esondido bei surfline</a></li>
+            <li><a href="https://www.booking.com/city/mx/puerto-escondido.de.html?aid=349015&pagename=puerto-escondido&label=msn-p*ih060d6XSx1A549E2ZuA-79852205612233:tikwd-79852359184747:loc-10:neo:mte:lp146440:dec:qspuerto%20escondido&utm_campaign=Mexico&utm_medium=cpc&utm_source=bing&utm_term=p*ih060d6XSx1A549E2ZuA&msclkid=3058f4eadd431c55b9419339d21f54d3&utm_content=Puerto%20Escondido%20-%20UFI%3A-1690388">Unterkünfte
+                    in Puerto Escondido bei booking.com</a></li>
+        </ul>
+    </main>
+    <footer>
+        <nav>
+        <a href="https://gregorysprenger2001.github.io/top/">vorhergehende Etappe</a>
+        <a href="https://lukas6020.github.io/top/">diese Etappe</a>
+        <a href="https://johannauniibk.github.io/top/">nächste Etappe</a>
+        </nav>
+    </footer>
+    <script>
+        var map = L.map('map').setView([15.87, -97.07], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+            var marker = L.marker([15.87, -97.07]).addTo(map);
+            marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+    </script>
+</body>
+
+</html>

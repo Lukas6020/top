@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neuseelandreise</title>
+    <link rel="shortcut icon" href="Images/maori.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
@@ -12,6 +15,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
+    <script defer src="main.js"></script>
 </head>
 
 <body>
@@ -21,6 +25,7 @@
         <a href="https://github.com/webmapping/nz"><img src="images/maori.jpg" alt="Maori"></a>
     </header>
     <main>
+        <article>
         <h1>Puerto Escondido</h1>
         <p>Puerto Escondido <em>versteckter Hafen</em> ist eine ca. 30.000 Einwohner zählende Urlaubsstadt an der Pazifikküste im Bundesstaat Oaxaca im Süden Mexikos. Die Stadt ist vor allen Dingen ein Ziel für Badetouristen und Surfer.</p>
         <p>Puerto Escondido liegt ca. 250 km (Fahrtstrecke) südlich von Oaxaca de Juárez in einer Höhe bis zu 60 m; die kürzeste Straßenverbindung (ca. 760 km) nach Mexiko-Stadt führt über Acapulco. Das Klima ist überwiegend schwülwarm; Regen (ca. 1285 mm/Jahr) fällt hauptsächlich in den Monaten Juni bis Oktober.</p>
@@ -42,6 +47,7 @@
             <li><a href="https://www.booking.com/city/mx/puerto-escondido.de.html?aid=349015&pagename=puerto-escondido&label=msn-p*ih060d6XSx1A549E2ZuA-79852205612233:tikwd-79852359184747:loc-10:neo:mte:lp146440:dec:qspuerto%20escondido&utm_campaign=Mexico&utm_medium=cpc&utm_source=bing&utm_term=p*ih060d6XSx1A549E2ZuA&msclkid=3058f4eadd431c55b9419339d21f54d3&utm_content=Puerto%20Escondido%20-%20UFI%3A-1690388">Unterkünfte
                     in Puerto Escondido bei booking.com</a></li>
         </ul>
+        </article>
     </main>
     <footer>
         <nav>
@@ -50,15 +56,7 @@
         <a href="https://johannauniibk.github.io/top/">nächste Etappe</a>
         </nav>
     </footer>
-    <script>
-        var map = L.map('map').setView([15.87, -97.07], 13);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
-            var marker = L.marker([15.87, -97.07]).addTo(map);
-            marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-    </script>
+
 </body>
 
 </html>
